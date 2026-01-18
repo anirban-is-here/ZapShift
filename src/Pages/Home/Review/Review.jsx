@@ -12,7 +12,7 @@ const Review = ({ reviewPromise }) => {
   const reviews = use(reviewPromise);
 
   return (
-    <div className="rounded-4xl shadow-primary-content ring ring-secondary/10 bg-base-200 py-20">
+    <div className="rounded-4xl shadow-primary-content py-13">
       {/* Top Image */}
       <div className="flex justify-center">
         <img src={image} alt="customers" />
@@ -32,7 +32,7 @@ const Review = ({ reviewPromise }) => {
       <div className="my-6 mx-auto w-24 h-1 bg-secondary rounded-full"></div>
 
       {/* Swiper */}
-      <div className="mt-7 p-5 container mx-auto  ">
+      <div className="mt-7 p-5 container mx-auto   max-w-2xl">
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
@@ -62,7 +62,7 @@ const Review = ({ reviewPromise }) => {
               key={review.id}
               className="!w-[300px] flex justify-center"
             >
-              <div className="card w-[330px] min-h-[300px] bg-base-100  rounded-2xl p-15 border border-base-300 hover:shadow-xl transition-all duration-100">
+              <div className="card w-[330px] min-h-[300px] bg-base-100 text-base-content rounded-2xl p-15 border border-base-300 hover:shadow-xl transition-all duration-100">
                 {/* User Section */}
                 <div className="flex items-center gap-4 mb-4">
                   <div className="avatar">
@@ -77,7 +77,7 @@ const Review = ({ reviewPromise }) => {
                   </div>
 
                   <div>
-                    <h2 className="font-semibold text-xl text-secondary">
+                    <h2 className="font-semibold text-xl text-base-content">
                       {review.userName}
                     </h2>
                     <p className="text-xs text-black opacity-60">
@@ -105,7 +105,7 @@ const Review = ({ reviewPromise }) => {
                 </div>
 
                 {/* Review */}
-                <p className="text-md leading-relaxed text-base-content/80 border-t border-dashed pt-3 primary">
+                <p className="text-md leading-relaxed text-base-content border-t border-dashed pt-3 primary">
                   {review.review}
                 </p>
               </div>

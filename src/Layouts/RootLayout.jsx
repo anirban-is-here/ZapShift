@@ -7,7 +7,7 @@ const RootLayout = () => {
     return (
         <div className='container mx-auto px-5'>
             <Navbar></Navbar>
-            <Outlet></Outlet>
+            <Outlet className=""></Outlet>
             <Footer></Footer>
         </div>
     );

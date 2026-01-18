@@ -47,7 +47,7 @@ const OurServices = () => {
 
   return (
     <>
-      <div className="p-16 mx-auto border rounded-3xl bg-secondary bg-linear-to-b from-black/20 mb-20 ">
+      <div className="p-16 mx-auto border-5 border-accent rounded-3xl bg-accent-content bg-linear-to-b from-black/20 mb-20 ">
         <h1 className="text-4xl font-bold text-center text-white">
           Our Services
         </h1>
@@ -62,15 +62,15 @@ const OurServices = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="p-6 h-70 rounded-2xl border border-base-300 bg-base-100 hover:bg-primary hover:scale-105 transition duration-50 flex flex-col items-center gap-y-3"
+              className="p-6 h-70 rounded-2xl border border-base-300 bg-accent hover:bg-secondary-content hover:scale-105 transition duration-50 flex flex-col items-center gap-y-3"
             >
-              <div className=" bg-amber-100 p-3 rounded-full">
-                <img className="w-10 h-10" src={Icon} alt="" />
+              <div className=" bg-primary hover:bg-secondary p-3 rounded-full">
+                <img className="w-10 h-10 " src={Icon} alt="" />
               </div>
-              <h2 className="text-lg font-semibold text-secondary mb-2">
+              <h2 className="text-lg font-semibold text-accent-content mb-2">
                 {service.title}
               </h2>
-              <p className="text-sm text-primary-content">
+              <p className="text-sm text-base-100">
                 {service.description}
               </p>
             </div>
@@ -92,42 +92,44 @@ const OurServices = () => {
           <img className="mx-10 h-5" src={image7} alt="" />
         </Marquee>
       </div>
-{/* ------------------------------------------------------------------------- */}
+      {/* ------------------------------------------------------------------------- */}
       <div className="border-y border-dashed my-10">
-        <div className="flex items-center gap-9 my-10  mx-20 rounded-2xl py-5 px-20 bg-white">
+        <div className="flex items-center gap-9 my-10  mx-20 rounded-2xl py-5 px-20 bg-primary">
           <img className="my-8" src={image8} alt="" />
           <div className="border-l border-dashed pl-8 py-10 ">
-            <h1 className="text-xl font font-semibold mb-5">
+            <h1 className="text-xl font font-semibold mb-5 text-base-content">
               Live Parcel Tracking
             </h1>
-            <p>
+            <p className="text-base-content">
               Stay updated in real-time with our live parcel tracking feature.
               From pick-up to delivery, monitor your shipment's journey and get
               instant status updates for complete peace of mind.
             </p>
           </div>
         </div>
-        <div className="flex items-center gap-9 my-10  mx-20 rounded-2xl py-5 px-20 bg-white">
+        <div className="flex items-center gap-9 my-10  mx-20 rounded-2xl py-5 px-20 bg-primary">
           <img className="my-8" src={image9} alt="" />
           <div className="border-l border-dashed pl-8 py-10 ">
-            <h1 className="text-xl font font-semibold mb-5">
+            <h1 className="text-xl font font-semibold mb-5 text-base-content">
               100% Safe Delivery
             </h1>
-            <p>
+            <p className="text-base-content">
               We ensure your parcels are handled with the utmost care and
               delivered securely to their destination. Our reliable process
               guarantees safe and damage-free delivery every time.
             </p>
           </div>
         </div>
-        <div className="flex items-center gap-9 my-10  mx-20 rounded-2xl py-5 px-20 bg-white">
+        <div className="flex items-center gap-9 my-10  mx-20 rounded-2xl py-5 px-20 bg-primary">
           <img className="my-8" src={image9} alt="" />
           <div className="border-l border-dashed pl-8 py-10 ">
-            <h1 className="text-xl font font-semibold mb-5">
+            <h1 className="text-xl font font-semibold mb-5 text-base-content">
               24/7 Call Center Support
             </h1>
-            <p>
-              Our dedicated support team is available around the clock to assist you with any questions, updates, or delivery concerns—anytime you need us.
+            <p className="text-base-content">
+              Our dedicated support team is available around the clock to assist
+              you with any questions, updates, or delivery concerns—anytime you
+              need us.
             </p>
           </div>
         </div>

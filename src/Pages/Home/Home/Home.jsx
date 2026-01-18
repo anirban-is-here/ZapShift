@@ -5,6 +5,7 @@ import HowItWorks from "../HowItWorks/HowItWorks";
 import OurServices from "../OurServices/OurServices";
 import Merchent from "../Merchent section/Merchent";
 import Review from "../Review/Review";
+import { Link } from "react-router";
 
 const reviewPromise = fetch('/reviews.json').then(res => res.json());
 
@@ -12,18 +13,21 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       <title>ZapShift - Home</title>
-      <div className="mt-10 relative">
+      <div className="mt-5 relative">
         <Banner></Banner>
         <div className="absolute bottom-20 left-26 flex ">
-          <button className="btn btn-primary btn-lg rounded-3xl">
-            Trac Your Parcel
+          <button className="btn-secondary  hover:bg-accent border-0 px-8 py-3 text-lg font-semibold shadow-lg">
+            Track Your Parcel
           </button>
-          <div className="rotate-45 rounded-full h-10 w-10 text-primary flex items-center justify-center text-2xl bg-secondary">
+          <div className="rotate-45 rounded-full h-10 w-10 text-primary flex items-center justify-center text-2xl bg-accent hover:bg-accent transition-colors mr-4 cursor-pointer">
             <IoArrowUpOutline />
           </div>
-          <button className="btn outline outline-gray-400 btn-lg mx-8 rounded-md">
+          <Link
+            to="/raider"
+            className="btn-outline bg-transparent text-primary hover:bg-primary hover:text-primary-content border-2 border-primary px-8 py-3 text-lg font-semibold"
+          >
             Be A Raider
-          </button>
+          </Link>
         </div>
       </div>
 

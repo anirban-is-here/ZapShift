@@ -1,26 +1,210 @@
-
-
-
-
-@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@100..900&display=swap");
 @import "tailwindcss";
 @plugin "daisyui";
-@plugin "daisyui/theme" {
-  name: "mytheme";
-  default: true; /* set as default */
-  
-  
 
+/* =====================================================
+   CUSTOM THEME (HEX COLORS — NO DAISYUI THEME)
+   ===================================================== */
+:root {
+  /* Brand */
+  --primary: #CAEB67;
+  --primary-content: #2A3A1F;
+
+  --secondary: #59AC77;
+  --secondary-content: #FFFFFF;
+
+  --bg: #007E6E;
+
+  /* --neutral: #73AF6F; */
+
+  --accent: #73AF6F;
+  --accent-content: #043915;
   
-  --color-primary: #CAEB66;
-  --color-primary-content: #606060;
-  --color-secondary: #03373D;
+  --accent-secondary-content: #1B211A;
+
+  /* Base / Background */
+  --base-100: #E7DEAF;
+ 
+  --base-300: #D7C097;
+  --base-content: #2A3132;
+
+  /* Text */
+  --text-primary: #2A3132;
+  --text-secondary: #4A5152;
+  --text-muted: #6B7778;
+
+  /* Status */
+  --success: #4CAF50;
+  --warning: #FF9800;
+  --error: #F44336;
 }
 
+/* =====================================================
+   TAILWIND UTILITIES (bg-*, text-*)
+   ===================================================== */
+@layer utilities {
+  /* Brand */
+  .bg-primary { background-color: var(--primary); }
+  .text-primary { color: var(--primary); }
+  
+  .text-primary-content { color: var(--primary-content); }
+
+  .bg-secondary { background-color: var(--secondary); } 
+  .text-secondary { color: var(--secondary); }
+  .text-secondary-content { color: var(--secondary-content); }
+
+  .bg-accent { background-color: var(--accent); }
+  .text-accent { color: var(--accent); }
+  .text-accent-content { color: var(--accent-content); }
+
+  /* Base */
+  .bg-base-100 { background-color: var(--base-100); }
+  .bg-bg { background-color: var(--bg); }
+  .bg-base-300 { background-color: var(--base-300); }
+  .text-base-content { color: var(--base-content); }
+
+  /* Text */
+  .text-text-primary { color: var(--text-primary); }
+  .text-text-secondary { color: var(--text-secondary); }
+  .text-text-muted { color: var(--text-muted); }
+
+  /* Status */
+  .bg-success { background-color: var(--success); }
+  .bg-warning { background-color: var(--warning); }
+  .bg-error { background-color: var(--error); }
+
+
+  .btn-primary {
+    @apply
+      bg-primary
+      text-primary-content
+      px-6 py-3
+      rounded-lg
+      font-semibold
+      transition-all
+      duration-200
+      
+      active:scale-95;
+  }
+
+  /* SECONDARY BUTTON */
+  .btn-secondary {
+    @apply
+      bg-secondary
+      text-secondary-content
+      px-6 py-3
+      rounded-lg
+      font-medium
+      transition-all
+      duration-200
+      ;
+  }
+
+  /* OUTLINE BUTTON */
+  .btn-outline {
+    @apply
+      border 
+      border-primary
+      text-primary
+      px-6 py-3
+      rounded-lg
+      font-medium
+      transition-all
+      duration-200
+      hover:bg-primary
+      hover:text-primary-content;
+  }
+
+  .form-label {
+    @apply
+      text-sm
+      font-medium
+      text-accent-content;
+  }
+
+  /* BASE INPUT */
+  .form-input {
+    @apply
+      w-full
+      px-4 py-3
+      rounded-lg
+      border
+      border-gray-300
+      bg-secondary-content
+      text-secondary
+      placeholder:text-gray-400
+      outline-none
+      transition
+      duration-200
+      focus:border-b-emerald-800
+      focus:ring-2
+      focus:ring-primary/30;
+  }
+
+  /* RADIO INPUT */
+  .form-radio {
+    @apply
+      h-4 w-4
+      cursor-pointer
+      border-gray-300
+      text-primary
+      focus:ring-2
+      focus:ring-primary/30;
+  }
+
+  /* RADIO LABEL */
+  .radio-label {
+    @apply
+      text-sm
+      text-secondary
+      cursor-pointer;
+  }
+
+  /* TEXTAREA */
+  .form-textarea {
+    @apply
+      w-full
+      min-h-[120px]
+      px-4 py-3
+      rounded-lg
+      border
+      border-gray-300
+      bg-white
+      text-secondary
+      placeholder:text-gray-400
+      resize-none
+      outline-none
+      transition
+      focus:border-primary
+      focus:ring-2
+      focus:ring-primary/30;
+  }
+
+  /* DROPDOWN / SELECT */
+  .form-select {
+    @apply
+      w-full
+      px-4 py-3
+      rounded-lg
+      border
+      border-gray-300
+      bg-white
+      text-secondary
+      outline-none
+      transition
+      focus:border-primary
+      focus:ring-2
+      focus:ring-primary/30;
+  }
+
+}
+
+/* =====================================================
+   GLOBAL STYLES
+   ===================================================== */
 body {
   font-family: "Urbanist", sans-serif;
-  font-optical-sizing: auto;
-
-  font-style: normal;
-  background-color: #E6F2F3;
+  background-color: #DEE791;
+  color: var(--text-secondary);
+  padding-top: 20px;
 }

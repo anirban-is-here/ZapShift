@@ -27,39 +27,37 @@ const Coverage = () => {
   };
 
   return (
-    <div className="px-20 h-278 pt-15 bg-white my-6 rounded-2xl shadow-sm">
-      <h2 className="text-5xl font-bold ">We are available in 64 districts</h2>
-      <div className="mt-10">
-        <div className="flex w-2/6 bg-[#E6F2F3]/60 rounded-3xl shadow-md overflow-hidden">
+    <div className="px-20 h-220 pt-15 bg-base-300 my-6 rounded-2xl shadow-sm">
+      <h2 className="text-3xl text-secondary font-bold ">
+        We are available in 64 districts
+      </h2>
+      <div className="mt-5 flex justify-between">
+        <h2 className="text-xl text-base-content font-medium my-2 ">
+          We deliver almost all over Bangladesh
+        </h2>
+        <div className="flex w-2/6 bg-base-100 rounded-3xl shadow-md ">
           <input
             type="text"
             placeholder="🔍 search here "
             name="location"
-            className="grow px-4 py-2 h-12 focus:outline-none"
-                      onChange={(e) => {
-                          setLocation(e.target.value);
-                          handleSearch(e)
-            } }
+            className="grow px-4 py-2 rounded-3xl h-12 text-base-content focus:ring ring-secondary outline-none"
+            onChange={(e) => {
+              setLocation(e.target.value);
+              handleSearch(e);
+            }}
           />
-          <button
-           
-            className="bg-primary text-black px-4 flex items-center rounded-3xl text-lg justify-center"
-          >
+          <button className="bg-secondary text-base-content px-4 flex items-center rounded-3xl text-lg justify-center">
             Search
           </button>
         </div>
       </div>
 
-      <div className="h-200 pt-5">
-        <h2 className="text-3xl font-bold my-7 ">
-          We deliver almost all over Bangladesh
-        </h2>
-
+      <div className="h-170 pt-5 rounded-2xl">
         <MapContainer
           center={[23.685, 90.3563]}
           zoom={8}
           scrollWheelZoom={false}
-          className="h-180"
+          className="h-150"
           ref={mapRef}
         >
           <TileLayer

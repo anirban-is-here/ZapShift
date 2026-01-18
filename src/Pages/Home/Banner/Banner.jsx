@@ -9,17 +9,26 @@ import banner3 from "../../../assets/banner/banner3.png";
 class DemoCarousel extends Component {
   render() {
     return (
-      <Carousel showStatus={false} showThumbs={false} infiniteLoop autoPlay>
-        <div>
-          <img src={banner1} />
+      <>
+        <div className=" rounded-4xl">
+          <Carousel showStatus={false} showThumbs={false} infiniteLoop autoPlay>
+            <div className="relative">
+              <img src={banner1} />
+              <div className="absolute inset-0 bg-linear-to-b from-(--bg)/50 to-transparent" />
+            </div>
+
+            <div className="relative">
+              <img src={banner2} />
+              <div className="absolute inset-0 bg-linear-to-b from-(--bg)/50 to-transparent" />
+            </div>
+
+            <div className="relative">
+              <img src={banner3} />
+              <div className="absolute inset-0 bg-linear-to-b from-(--bg)/50 to-transparent" />
+            </div>
+          </Carousel>
         </div>
-        <div>
-          <img src={banner2} />
-        </div>
-        <div>
-          <img src={banner3} />
-        </div>
-      </Carousel>
+      </>
     );
   }
 }
@@ -30,6 +39,6 @@ const Banner = () => {
       <DemoCarousel />
     </div>
   );
-};
+};  
 
 export default Banner;

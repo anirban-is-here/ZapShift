@@ -26,10 +26,10 @@ const Footer = () => {
     </>
   );
   return (
-    <footer className="footer footer-horizontal rounded-xl footer-center bg-[#030712] text-white p-10">
+    <footer className="footer footer-horizontal rounded-xl footer-center bg-accent text-accent-content p-10">
       <aside className="">
         <Logo></Logo>
-        <p className="font-bold mt-5 text-[#DADADA]">
+        <p className="font-bold mt-5 text-accent-content">
           Enjoy fast, reliable parcel delivery with real-time tracking and zero
           hassle. From personal packages to <br /> business shipments — we
           deliver on time, every time.
